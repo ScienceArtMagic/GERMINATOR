@@ -1,5 +1,7 @@
 # GERMINATOR: Generalist and Expert Rank Mixer Initialization Network of Approximations Taming Optimized Randomization
 
+![GERMINATOR](assets/GERMINATOR_base2.png)
+
 ## Abstract
 
 The overwhelming majority of recent work in language model compression and parameter efficiency has focused on techniques such as quantization, structured or unstructured pruning, knowledge distillation, or low-rank approximation and similar adaptations (and even then, primarily as alternatives to full fine-tuning).
