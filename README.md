@@ -52,6 +52,8 @@ TODO: More shoutouts
 
 ## Acknowledgements
 
-[Evin Tunador](https://www.youtube.com/@Tunadorable)
+[Evin Tunador](https://youtube.com/@Tunadorable)
+
+[Bytez](https://bytez.com)
 
 TODO: More/more detailed shoutouts
