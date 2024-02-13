@@ -57,3 +57,24 @@ TODO: More shoutouts
 [Bytez](https://bytez.com)
 
 TODO: More/more detailed shoutouts
+
+## License
+
+You must leave your email address, social security number, and deed to your firstborn child before visiting this repository. You agree not to use this model within 500 feet of other models, nor do anything that the author might decide, at a later and unspecified lunar phase, that you're not allowed to do.
+
+Kidding. It's MIT. Do what feels good. Be kind, don't harm, love life. Not because you're required, but because you're free to do what you want. Make money. Or don't. Your choice.
+
+Attribution would be awesome. See [Citation](#Citation)
+
+It would be pretty cool if you decide to contribute to the project in any way. Code, docs, feedback/reviews/issues, or just starring the repo. All are helpful and welcome.
+
+## Citation
+
+```bibtex
+@software{Bybee_GERMINATOR_Generalist_and,
+author = {Bybee, Mike},
+license = {MIT},
+title = {{GERMINATOR: Generalist and Expert Rank Mixer Initialization Network of Approximations Taming Optimized Randomization}},
+url = {https://github.com/ScienceArtMagic/GERMINATOR}
+}
+```
