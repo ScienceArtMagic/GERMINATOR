@@ -8,7 +8,7 @@ The overwhelming majority of recent work in language model compression and param
 
 The Mixture of Experts (MoE) architecture has emerged as a way to gain additional benefits of overparameterization in massive models while keeping compute requirements during inference (and, to varying degrees, training) lower; however, MoE models still require excessive amounts of storage, and their (usually) learned gating mechanisms are often complicated and error-prone. 
 
-Hyperparameters are optimized manually or through AutoML techniques. Still, experimental code and literature on the very seeds used to set pseudorandom number generators for model weight (and bias) initialization is, relatively speaking, practically nonexistent.
+Hyperparameters are optimized manually or through AutoML techniques. Still, experimental code and literature on the very seeds used to set pseudorandom number generators for model weight (and bias) initialization is, relatively speaking, virtually nonexistent.
 
 This project introduces GERMINATOR, a potentially trillionth-scale hybrid language model architecture, leveraging (pseudo)random seeds for parameter initialization, shift, scale, and sparse-to-dense prune-mixing as well as sign-switching supermasks, as scalar learnable parameters. The millions-to-trillions of parameters typically stored in model checkpoints are instead generated on the fly - and only the parameters of the current, previous, and next layers must be loaded on the target device's memory at any given time (during training and inference).
 
