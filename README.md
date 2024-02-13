@@ -52,9 +52,9 @@ TODO: More shoutouts
 
 ## Acknowledgements
 
-[Evin Tunador](https://youtube.com/@Tunadorable)
+[Evin Tunador](https://youtube.com/@Tunadorable), for keeping the author abreast of the latest papers, often on subjects not sought out (several of which have guided trains of thought when least expected). His YouTube channel and newsletter are great for keeping up with such papers. His Discord server is the author's favorite place to spitball ideas followed by vibrant and active-minded discussion, even when the same ideas are ignored or dismissed on more established, prominent servers.
 
-[Bytez](https://bytez.com)
+[Bytez](https://bytez.com), for text-to-speech playback of papers that have saved the author countless hours of reading when multitasking was required.
 
 TODO: More/more detailed shoutouts
 
