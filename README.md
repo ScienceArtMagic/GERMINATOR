@@ -26,7 +26,7 @@ TODO: Shoutouts
 
 ## Generalist and (Mixture of) Expert(s)
 
-Expert selection is incredibly simple, leveraging hard-coded modulo operator gates (`token % n_experts`); however, unlike contemporary works in which experts are generally selected by token (or vice versa) via often far more complicated learnable top_k, softmax, or other nonlinearity with a single split for `n_experts`, GERMINATOR uses multiple `n_experts` splits per layer. The only learnable parameter for expert specialization is a rank scalar, for each expert in every `n_experts` split. The result is an extremely parameter-efficient (in memory at runtime, and especially on storage) mixture of experts, yet one that is robustly capable of generalization, specialization, and continual learning without catastrophic forgetting.
+Expert selection is incredibly simple, leveraging hard-coded modulo operator gates (`token % n_experts`); however, unlike contemporary works in which experts are generally selected by token (or vice versa) via an often far more complicated learnable gate with top_k, softmax, or other nonlinearity with a single split for `n_experts`, GERMINATOR uses multiple `n_experts` splits per layer. The only learnable parameter for expert specialization is a rank scalar, for each expert in every `n_experts` split. The result is an extremely parameter-efficient (in memory at runtime, and especially on storage) mixture of experts, yet one that is robustly capable of generalization, specialization, and continual learning without catastrophic forgetting.
 
 ## Rank Mixer
 
