@@ -1,5 +1,7 @@
 # GERMINATOR: Generalist and Expert Rank Mixer Initialization Network of Approximations Taming Optimized Randomization
 
+### Mike Bybee, Science/Art/Magic
+
 ![GERMINATOR](assets/GERMINATOR_base2.png)
 
 ## Abstract
