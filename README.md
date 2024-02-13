@@ -4,6 +4,8 @@
 
 ![GERMINATOR](assets/GERMINATOR_base2.png)
 
+Consider this "paper" a living document. If published to a preprint server (e.g. [arXiv](https://arxiv.org)), best efforts will be made to ensure that updated versions are also published at appropriate releases.
+
 ## Abstract
 
 The overwhelming majority of recent work in neural network compression and parameter efficiency has focused on techniques such as quantization, structured or unstructured pruning, knowledge distillation, or low-rank approximation and similar adaptations (and even then, the latter primarily as alternatives to full fine-tuning).
