@@ -1,0 +1,60 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  GERMINATOR: Generalist and Expert Rank Mixer
+  Initialization Network of Approximations Taming Optimized
+  Randomization
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Mike
+    family-names: Bybee
+    email: mike@scienceartmagic.com
+    affiliation: Science/Art/Magic
+    orcid: 'https://orcid.org/0009-0003-9802-013X'
+repository-code: 'https://github.com/ScienceArtMagic/GERMINATOR'
+abstract: >-
+  The overwhelming majority of recent work in language model
+  compression and parameter efficiency has focused on
+  techniques such as quantization, structured or
+  unstructured pruning, knowledge distillation, or low-rank
+  approximation and similar adaptations (and even then,
+  primarily as alternatives to full fine-tuning).
+
+
+  The Mixture of Experts (MoE) architecture has emerged as a
+  way to gain the additional benefits of
+  overparameterization realized in massive models while
+  keeping compute requirements during inference (and, to
+  varying degrees, training) lower; however, MoE models
+  still require excessive amounts of storage, and their
+  (usually) learned gating mechanisms are often complicated
+  and error-prone. 
+
+
+  Hyperparameters are optimized manually or through AutoML
+  techniques. Still, experimental code and literature on the
+  very seeds used to set pseudorandom number generators for
+  model weight (and bias) initialization is, relatively
+  speaking, virtually nonexistent.
+
+
+  This project introduces GERMINATOR, a potentially
+  trillionth-scale hybrid language model architecture,
+  leveraging (pseudo)random seeds for parameter
+  initialization, shift, scale, and sparse-to-dense
+  prune-mixing as well as sign-switching supermasks, as
+  scalar learnable parameters. The millions-to-trillions of
+  parameters typically stored in model checkpoints are
+  instead generated on the fly - and only the parameters of
+  the current, previous, and next layers must be loaded on
+  the target device's memory at any given time (during
+  training and inference).
+keywords:
+  - random
+  - seed
+license: MIT
