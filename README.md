@@ -41,3 +41,5 @@ TODO: More shoutouts
 ## Acknowledgements
 
 [Evin Tunador](https://www.youtube.com/@Tunadorable)
+
+TODO: More/more detailed shoutouts
