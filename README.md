@@ -2,7 +2,9 @@
 
 ## Abstract
 
-The overwhelming majority of recent work in language model compression and parameter efficiency has focused on techniques such as quantization, structured or unstructured pruning, knowledge distillation, or low-rank approximation and similar adaptations (and even then, primarily as alternatives to full fine-tuning). 
+The overwhelming majority of recent work in language model compression and parameter efficiency has focused on techniques such as quantization, structured or unstructured pruning, knowledge distillation, or low-rank approximation and similar adaptations (and even then, primarily as alternatives to full fine-tuning).
+
+The Mixture of Experts (MoE) architecture has emerged as a way to gain additional benefits of overparameterization in massive models while keeping compute requirements during inference (and, to varying degrees, training) lower; however, MoE models still require excessive amounts of storage, and their (usually) learned gating mechanisms are often complicated and error-prone. 
 
 Hyperparameters are optimized manually or through AutoML techniques. Still, experimental code and literature on the very seeds used to set pseudorandom number generators for model weight (and bias) initialization is, relatively speaking, practically nonexistent.
 
@@ -10,7 +12,7 @@ This project introduces GERMINATOR, a potentially trillionth-scale hybrid langua
 
 ## Introduction
 
-TODO: Introduce yourself
+TODO: Introduce problem(s), hypothesis/hypotheses
 
 ## Related Work
 
