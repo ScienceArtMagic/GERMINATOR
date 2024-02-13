@@ -30,7 +30,7 @@ Expert selection is incredibly simple, leveraging hard-coded modulo operator gat
 
 ## Rank Mixer
 
-TODO: Mixing heterogenous low-rank matrices through bilinear layers
+TODO: Mixing heterogenous low-rank matrices via rank stacking and through bilinear layers
 
 ## Initialization Network of Approximations
 
