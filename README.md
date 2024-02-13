@@ -38,6 +38,14 @@ All other parameters are 32-bit signed floating-point, 32- or 8-bit signed integ
 
 TODO: How to train/optimizer setup for 64-bit random seeds
 
+## Experiments
+
+TODO: Do science
+
+## Limitations
+
+TODO: Be real
+
 ## References
 
 TODO: More shoutouts
