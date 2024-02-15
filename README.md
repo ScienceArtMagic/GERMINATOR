@@ -38,15 +38,17 @@ TODO: Mixing heterogenous low-rank matrices via rank stacking and through biline
 
 ### Initialization Network of Approximations
 
-Inspired by Hypernetworks, small neural networks trained to generate the weights of much larger models, GERMINATOR simplifies the process by learning the 'seeds' for pseudorandom number generators, typically used for reproducible weight initializations in experimental setups (e.g. `torch.manual_seed()`). These are the most complex parameters GERMINATOR needs to learn, as they are 64-bit signed integer scalars. This includes seeds for weights and biases, pruning and sign supermasks, and fine-grained shifting and scaling of post-supermask weights.
+Inspired by Hypernetworks, small neural networks trained to generate the weights of much larger models, GERMINATOR simplifies the process by learning the 'seeds' for pseudorandom number generators, typically used for reproducible weight initializations in experimental setups (e.g. `torch.manual_seed()`). These are some of the most complex parameters GERMINATOR needs to learn (with full, as they are up to 32-bit signed integer scalars (but can be reduced to 16- or even 8-bit integers to reduce the seed search space at any point in training). This includes seeds for weights and biases, pruning supermasks, and fine-grained shifting and scaling of post-supermask weights.
 
-All other parameters are 32-bit signed floating-point, 32- or 8-bit signed integer, or 8-bit unsigned integer scalars. Some of these are learnable, such as course-grained scaling scalars (32-bit float). Weights and biases are initialized (at training or inference, and unlearnable) as signed and unsigned 8-bit low-rank tensors, but computed as 32-bit floating-point after division by 128 (signed, as `abs(tensor)` is `2 ** 7` in `int8`) or 256 (unsigned, as `tensor` is `2 ** 8` in `uint8`) and matrix multiplication.
+Coarse-grained scaling parameters (for the weights themselves, and for scaling the bias vectors) are learned 32-bit signed floating point scalars. 
+
+All other parameters are 32-bit signed floating-point, 32-, 16-, or 8-bit signed integer, or 8-bit unsigned integer scalars. Weights and biases are initialized (at training or inference, and unlearnable) in as low as 8-bit (signed and unsigned) low-rank tensors, but computed as 32-bit floating-point after division by 128 (signed, as `abs(tensor)` is `2 ** 7` in `int8`) or 256 (unsigned, as `tensor` is `2 ** 8` in `uint8`) and matrix multiplication.
 
 ### Taming Optimized Randomization
 
 While "random" seed training has the intuitive potential for unique challenges, this project's primary hypothesis is that by eliminating the need to train every individual weight and bias - potentially reducing trainable parameters from tens of thousands or more per layer, to mere dozens - the learning of representations so difficult to predict or linearly adjust can become a worthwhile tradeoff, from both efficiency and performance standpoints.
 
-Because the learnable parameters are seeding pseudorandom number generators, the actual generated and modified tensors are effectively frozen during both training and inference (which are essentially the same as far as the on-the-fly generated model weights and required compute are concerned).
+Because most of the learnable parameters are seeding pseudorandom number generators, the actual generated and modified tensors are effectively frozen during both training and inference (which are essentially the same, as far as model weights generated on the fly, and required compute, are concerned).
 
 TODO: How to train/optimizer setup for up to 64-bit random seeds
 
