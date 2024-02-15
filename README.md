@@ -42,7 +42,7 @@ Inspired by Hypernetworks, small neural networks trained to generate the weights
 
 Coarse-grained scaling parameters (for the weights themselves, and for scaling the bias vectors) are learned 32-bit signed floating point scalars. 
 
-All other parameters are 32-bit signed floating-point, 32-, 16-, or 8-bit signed integer, or 8-bit unsigned integer scalars. Weights and biases are initialized (at training or inference, and unlearnable) in as low as 8-bit (signed and unsigned) low-rank tensors, but computed as 32-bit floating-point after division by 128 (signed, as `abs(tensor)` is `2 ** 7` in `int8`) or 256 (unsigned, as `tensor` is `2 ** 8` in `uint8`) and matrix multiplication.
+Weights and biases are initialized (at training and inference, unlearnable) in as low as 8-bit (signed and unsigned) low-rank integers, but computed as 32-bit floating-point (or float16 or bfloat16 if supported by hardware), after division by the maximum absolute value of the datatype (e.g. 128 for signed 8-bit integer as `abs(torch.iinfo(tensor.dtype).min())` is `2 ** 7` in `torch.int8`, or 256 for unsigned integer as `torch.iinfo(tensor.dtype).max()` is `2 ** 8` in `torch.uint8`) and matrix multiplication.
 
 ### Taming Optimized Randomization
 
