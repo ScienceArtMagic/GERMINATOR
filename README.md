@@ -2,7 +2,7 @@
 
 Mike Bybee, Science/Art/Magic
 
-![GERMINATOR](assets/GERMINATOR_base2.png)
+!["a T-800 blowing a dandelion"](assets/GERMINATOR_base2.png)
 
 Consider this "paper" to be a living document. If published to a preprint server (e.g. [arXiv](https://arxiv.org)), best efforts will be made to ensure that updated versions are also published at appropriate releases.
 
