@@ -72,7 +72,7 @@ TODO: More/more detailed shoutouts
 
 You must provide your email address, social security number, and title to your firstborn child before visiting this repository. You agree not to use this model within 500 feet of other AI models, nor do anything the author may decide, at a later and as-yet-unspecified lunar phase, that you're not allowed to do. Being a Yankees fan immediately revokes your right to use this model, in perpetuity.
 
-Kidding. It's MIT. Do what feels good. Be kind, don't harm, love life. Not because you're required, but because you're free to do what you want. Make money, or don't. Your choice. Abide by the few paragraphs in [LICENSE](LICENSE), and you're golden.
+Kidding. It's [MIT](LICENSE). Do what feels good. Be kind, don't harm, love life. Not because you're required, but because you're free to do what you want. Make money, or don't. Your choice. Abide by the few paragraphs in [LICENSE](LICENSE), and you're golden.
 
 Attribution would be awesome. See [Citation](#Citation) or just link to [this repo](https://github/ScienceArtMagic/GERMINATOR).
 
