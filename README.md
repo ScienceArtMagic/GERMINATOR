@@ -26,21 +26,23 @@ TODO: Introduce problem(s), hypothesis/hypotheses
 
 TODO: Shoutouts
 
-## Generalist and (Mixture of) Expert(s)
+## GERMINATOR
+
+### Generalist and (Mixture of) Expert(s)
 
 Expert selection is incredibly simple, leveraging hard-coded modulo operator gates (`token % n_experts`); however, unlike contemporary works in which experts are generally selected by token (or vice versa) via an often far more complicated learnable gate with top_k, softmax, or other nonlinearity with a single split for `n_experts`, GERMINATOR uses multiple `n_experts` splits per layer. The only learnable parameter for expert specialization is a rank scalar, for each expert in every `n_experts` split. The result is an extremely parameter-efficient (in memory at runtime, and especially on storage) mixture of experts, yet one that is robustly capable of generalization, specialization, and continual learning without catastrophic forgetting.
 
-## Rank Mixer
+### Rank Mixer
 
 TODO: Mixing heterogenous low-rank matrices via rank stacking and through bilinear layers
 
-## Initialization Network of Approximations
+### Initialization Network of Approximations
 
 Inspired by Hypernetworks, small neural networks trained to generate the weights of much larger models, GERMINATOR simplifies the process by learning the 'seeds' for pseudorandom number generators, typically used for reproducible weight initializations in experimental setups (e.g. `torch.manual_seed()`). These are the most complex parameters GERMINATOR needs to learn, as they are 64-bit signed integer scalars. This includes seeds for weights and biases, pruning and sign supermasks, and fine-grained shifting and scaling of post-supermask weights.
 
 All other parameters are 32-bit signed floating-point, 32- or 8-bit signed integer, or 8-bit unsigned integer scalars. Some of these are learnable, such as course-grained scaling scalars (32-bit float). Weights and biases are initialized (at training or inference, and unlearnable) as signed and unsigned 8-bit low-rank tensors, but computed as 32-bit floating-point after division by 128 (signed, as `abs(tensor)` is `2 ** 7` in `int8`) or 256 (unsigned, as `tensor` is `2 ** 8` in `uint8`) and matrix multiplication.
 
-## Taming Optimized Randomization
+### Taming Optimized Randomization
 
 While "random" seed training has the intuitive potential for unique challenges, this project's primary hypothesis is that by eliminating the need to train every individual weight and bias - potentially reducing trainable parameters from tens of thousands or more per layer, to mere dozens - the learning of representations so difficult to predict or linearly adjust can become a worthwhile tradeoff, from both efficiency and performance standpoints.
 
