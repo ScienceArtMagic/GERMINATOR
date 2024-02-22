@@ -24,6 +24,22 @@ TODO: Introduce problem(s), hypothesis/hypotheses
 
 ## Related Work
 
+### 2.1 Network Pruning: Playing The Efficiency Lottery
+
+Building upon the success of earlier work such as @lecunOptimal1989, @frankleLotteryTicketHypothesis2019, research into network pruning is typically focused on the compression of existing, larger pre-trained models by discarding weights, blocks, or entire layers that contribute the least to overall model performance. This is largely orthogonal to the work of this paper, though its use of skipping is similar to block or layer pruning (albeit more dynamic).
+
+Established pruning techniques are orthogonal, with similar efficiency goals. Approaches such as Wanda [@sunSimpleEffectivePruning2023] can prune with as little as a single sample and forward pass; therefore, future research into combining this work with such approaches might be beneficial.
+
+GERMINATOR's use of pruning masks only temporarily results in sparsity, however, as the masked-out weights of the first source tensor are replaced by a second source tensor with the exact opposite mask (bits of the first mask are flipped via the `~`, i.e. `logical_not`, operator).
+
+### 2.2 Random Weight Initialization: Another Game of Chance
+
+Prior work in computer vision [@picardTorchManual_seed34072023] has demonstrated that certain outlier random seeds perform much better or worse than average. This is measured by accuracy after brief pre-training runs for models of identical architecture on multiple single-seed initializations.
+
+@bethardWeNeedTalk2022 explores the safety/validity and/or risk of various uses of random seeds. While such delineation is certainly worthwhile, the primary focus in the current work is the most extreme parameter efficiency achievable. To that end, its use of random seeds is only to avoid the storage and CPU-GPU transfer of as many parameters as possible. While exact stability of said seeds would be ideal, any such divergence should theoretically be quickly accounted for through computationally minimal adjustment training.
+
+This paper differs from @picardTorchManual_seed34072023 in that the random seeds themselves are trainable scalar parameters. @nooralinejadPRANCPseudoRAndom2023 uses such trainable seed scalars to initialize "basis networks,"
+
 TODO: Shoutouts
 
 ## GERMINATOR
