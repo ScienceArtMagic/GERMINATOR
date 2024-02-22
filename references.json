@@ -1,0 +1,228 @@
+[
+  {
+    "id": "bethardWeNeedTalk2022",
+    "abstract": "Modern neural network libraries all take as a hyperparameter a random seed, typically used to determine the initial state of the model parameters. This opinion piece argues that there are some safe uses for random seeds: as part of the hyperparameter search to select a good model, creating an ensemble of several models, or measuring the sensitivity of the training algorithm to the random seed hyperparameter. It argues that some uses for random seeds are risky: using a fixed random seed for \"replicability\" and varying only the random seed to create score distributions for performance comparison. An analysis of 85 recent publications from the ACL Anthology finds that more than 50% contain risky uses of random seeds.",
+    "accessed": { "date-parts": [["2024", 1, 16]] },
+    "author": [{ "family": "Bethard", "given": "Steven" }],
+    "citation-key": "bethardWeNeedTalk2022",
+    "DOI": "10.48550/arXiv.2210.13393",
+    "issued": { "date-parts": [["2022", 10, 24]] },
+    "number": "arXiv:2210.13393",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "We need to talk about random seeds",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2210.13393"
+  },
+  {
+    "id": "frankleLotteryTicketHypothesis2019",
+    "abstract": "Neural network pruning techniques can reduce the parameter counts of trained networks by over 90%, decreasing storage requirements and improving computational performance of inference without compromising accuracy. However, contemporary experience is that the sparse architectures produced by pruning are difficult to train from the start, which would similarly improve training performance. We find that a standard pruning technique naturally uncovers subnetworks whose initializations made them capable of training effectively. Based on these results, we articulate the \"lottery ticket hypothesis:\" dense, randomly-initialized, feed-forward networks contain subnetworks (\"winning tickets\") that - when trained in isolation - reach test accuracy comparable to the original network in a similar number of iterations. The winning tickets we find have won the initialization lottery: their connections have initial weights that make training particularly effective. We present an algorithm to identify winning tickets and a series of experiments that support the lottery ticket hypothesis and the importance of these fortuitous initializations. We consistently find winning tickets that are less than 10-20% of the size of several fully-connected and convolutional feed-forward architectures for MNIST and CIFAR10. Above this size, the winning tickets that we find learn faster than the original network and reach higher test accuracy.",
+    "accessed": { "date-parts": [["2024", 1, 16]] },
+    "author": [
+      { "family": "Frankle", "given": "Jonathan" },
+      { "family": "Carbin", "given": "Michael" }
+    ],
+    "citation-key": "frankleLotteryTicketHypothesis2019",
+    "DOI": "10.48550/arXiv.1803.03635",
+    "issued": { "date-parts": [["2019", 3, 4]] },
+    "number": "arXiv:1803.03635",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",
+    "title-short": "The Lottery Ticket Hypothesis",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/1803.03635"
+  },
+  {
+    "id": "haHyperNetworks2016",
+    "abstract": "This work explores hypernetworks: an approach of using a one network, also known as a hypernetwork, to generate the weights for another network. Hypernetworks provide an abstraction that is similar to what is found in nature: the relationship between a genotype - the hypernetwork - and a phenotype - the main network. Though they are also reminiscent of HyperNEAT in evolution, our hypernetworks are trained end-to-end with backpropagation and thus are usually faster. The focus of this work is to make hypernetworks useful for deep convolutional networks and long recurrent networks, where hypernetworks can be viewed as relaxed form of weight-sharing across layers. Our main result is that hypernetworks can generate non-shared weights for LSTM and achieve near state-of-the-art results on a variety of sequence modelling tasks including character-level language modelling, handwriting generation and neural machine translation, challenging the weight-sharing paradigm for recurrent networks. Our results also show that hypernetworks applied to convolutional networks still achieve respectable results for image recognition tasks compared to state-of-the-art baseline models while requiring fewer learnable parameters.",
+    "accessed": { "date-parts": [["2024", 2, 21]] },
+    "author": [
+      { "family": "Ha", "given": "David" },
+      { "family": "Dai", "given": "Andrew" },
+      { "family": "Le", "given": "Quoc V." }
+    ],
+    "citation-key": "haHyperNetworks2016",
+    "DOI": "10.48550/arXiv.1609.09106",
+    "issued": { "date-parts": [["2016", 12, 1]] },
+    "number": "arXiv:1609.09106",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "HyperNetworks",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/1609.09106"
+  },
+  {
+    "id": "huangLoraHubEfficientCrossTask2024",
+    "abstract": "Low-rank adaptations (LoRA) are often employed to fine-tune large language models (LLMs) for new tasks. This paper investigates LoRA composability for cross-task generalization and introduces LoraHub, a simple framework devised for the purposive assembly of LoRA modules trained on diverse given tasks, with the objective of achieving adaptable performance on unseen tasks. With just a few examples from a new task, LoraHub can fluidly combine multiple LoRA modules, eliminating the need for human expertise and assumptions. Notably, the composition requires neither additional model parameters nor gradients. Empirical results on the Big-Bench Hard benchmark suggest that LoraHub, while not surpassing the performance of in-context learning, offers a notable performance-efficiency trade-off in few-shot scenarios by employing a significantly reduced number of tokens per example during inference. Notably, LoraHub establishes a better upper bound compared to in-context learning when paired with different demonstration examples, demonstrating its potential for future development. Our vision is to establish a platform for LoRA modules, empowering users to share their trained LoRA modules. This collaborative approach facilitates the seamless application of LoRA modules to novel tasks, contributing to an adaptive ecosystem. Our code is available at https://github.com/sail-sg/lorahub, and all the pre-trained LoRA modules are released at https://huggingface.co/lorahub.",
+    "accessed": { "date-parts": [["2024", 2, 17]] },
+    "author": [
+      { "family": "Huang", "given": "Chengsong" },
+      { "family": "Liu", "given": "Qian" },
+      { "family": "Lin", "given": "Bill Yuchen" },
+      { "family": "Pang", "given": "Tianyu" },
+      { "family": "Du", "given": "Chao" },
+      { "family": "Lin", "given": "Min" }
+    ],
+    "citation-key": "huangLoraHubEfficientCrossTask2024",
+    "DOI": "10.48550/arXiv.2307.13269",
+    "issued": { "date-parts": [["2024", 1, 18]] },
+    "number": "arXiv:2307.13269",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "LoraHub: Efficient Cross-Task Generalization via Dynamic LoRA Composition",
+    "title-short": "LoraHub",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2307.13269"
+  },
+  {
+    "id": "jiangPruningPretrainedLanguage2023",
+    "abstract": "To overcome the overparameterized problem in Pre-trained Language Models (PLMs), pruning is widely used as a simple and straightforward compression method by directly removing unimportant weights. Previous first-order methods successfully compress PLMs to extremely high sparsity with little performance drop. These methods, such as movement pruning, use first-order information to prune PLMs while fine-tuning the remaining weights. In this work, we argue fine-tuning is redundant for first-order pruning, since first-order pruning is sufficient to converge PLMs to downstream tasks without fine-tuning. Under this motivation, we propose Static Model Pruning (SMP), which only uses first-order pruning to adapt PLMs to downstream tasks while achieving the target sparsity level. In addition, we also design a new masking function and training objective to further improve SMP. Extensive experiments at various sparsity levels show SMP has significant improvements over first-order and zero-order methods. Unlike previous first-order methods, SMP is also applicable to low sparsity and outperforms zero-order methods. Meanwhile, SMP is more parameter efficient than other methods due to it does not require fine-tuning.",
+    "accessed": { "date-parts": [["2024", 2, 18]] },
+    "author": [
+      { "family": "Jiang", "given": "Ting" },
+      { "family": "Wang", "given": "Deqing" },
+      { "family": "Zhuang", "given": "Fuzhen" },
+      { "family": "Xie", "given": "Ruobing" },
+      { "family": "Xia", "given": "Feng" }
+    ],
+    "citation-key": "jiangPruningPretrainedLanguage2023",
+    "DOI": "10.48550/arXiv.2210.06210",
+    "issued": { "date-parts": [["2023", 5, 16]] },
+    "number": "arXiv:2210.06210",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "Pruning Pre-trained Language Models Without Fine-Tuning",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2210.06210"
+  },
+  {
+    "id": "lecunOptimal1989",
+    "author": [
+      { "family": "LeCun", "given": "Yann" },
+      { "family": "Denker", "given": "John" },
+      { "family": "Solla", "given": "Sara" }
+    ],
+    "citation-key": "lecunOptimal1989",
+    "container-title": "Advances in neural information processing systems",
+    "editor": [{ "family": "Touretzky", "given": "D." }],
+    "issued": { "date-parts": [["1989"]] },
+    "publisher": "Morgan-Kaufmann",
+    "title": "Optimal brain damage",
+    "type": "paper-conference",
+    "URL": "https://proceedings.neurips.cc/paper_files/paper/1989/file/6c9882bbac1c7093bd25041881277658-Paper.pdf",
+    "volume": "2"
+  },
+  {
+    "id": "nooralinejadPRANCPseudoRAndom2023",
+    "abstract": "We demonstrate that a deep model can be reparametrized as a linear combination of several randomly initialized and frozen deep models in the weight space. During training, we seek local minima that reside within the subspace spanned by these random models (i.e., `basis' networks). Our framework, PRANC, enables significant compaction of a deep model. The model can be reconstructed using a single scalar `seed,' employed to generate the pseudo-random `basis' networks, together with the learned linear mixture coefficients. In practical applications, PRANC addresses the challenge of efficiently storing and communicating deep models, a common bottleneck in several scenarios, including multi-agent learning, continual learners, federated systems, and edge devices, among others. In this study, we employ PRANC to condense image classification models and compress images by compacting their associated implicit neural networks. PRANC outperforms baselines with a large margin on image classification when compressing a deep model almost $100$ times. Moreover, we show that PRANC enables memory-efficient inference by generating layer-wise weights on the fly. The source code of PRANC is here: \\url{https://github.com/UCDvision/PRANC}",
+    "accessed": { "date-parts": [["2024", 2, 10]] },
+    "author": [
+      { "family": "Nooralinejad", "given": "Parsa" },
+      { "family": "Abbasi", "given": "Ali" },
+      { "family": "Koohpayegani", "given": "Soroush Abbasi" },
+      { "family": "Meibodi", "given": "Kossar Pourahmadi" },
+      { "family": "Khan", "given": "Rana Muhammad Shahroz" },
+      { "family": "Kolouri", "given": "Soheil" },
+      { "family": "Pirsiavash", "given": "Hamed" }
+    ],
+    "citation-key": "nooralinejadPRANCPseudoRAndom2023",
+    "DOI": "10.48550/arXiv.2206.08464",
+    "issued": { "date-parts": [["2023", 8, 28]] },
+    "number": "arXiv:2206.08464",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "PRANC: Pseudo RAndom Networks for Compacting deep models",
+    "title-short": "PRANC",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2206.08464"
+  },
+  {
+    "id": "ortizMagnitudeInvariantParametrizations2023",
+    "abstract": "Hypernetworks, neural networks that predict the parameters of another neural network, are powerful models that have been successfully used in diverse applications from image generation to multi-task learning. Unfortunately, existing hypernetworks are often challenging to train. Training typically converges far more slowly than for non-hypernetwork models, and the rate of convergence can be very sensitive to hyperparameter choices. In this work, we identify a fundamental and previously unidentified problem that contributes to the challenge of training hypernetworks: a magnitude proportionality between the inputs and outputs of the hypernetwork. We demonstrate both analytically and empirically that this can lead to unstable optimization, thereby slowing down convergence, and sometimes even preventing any learning. We present a simple solution to this problem using a revised hypernetwork formulation that we call Magnitude Invariant Parametrizations (MIP). We demonstrate the proposed solution on several hypernetwork tasks, where it consistently stabilizes training and achieves faster convergence. Furthermore, we perform a comprehensive ablation study including choices of activation function, normalization strategies, input dimensionality, and hypernetwork architecture; and find that MIP improves training in all scenarios. We provide easy-to-use code that can turn existing networks into MIP-based hypernetworks.",
+    "accessed": { "date-parts": [["2023", 12, 29]] },
+    "author": [
+      { "family": "Ortiz", "given": "Jose Javier Gonzalez" },
+      { "family": "Guttag", "given": "John" },
+      { "family": "Dalca", "given": "Adrian" }
+    ],
+    "citation-key": "ortizMagnitudeInvariantParametrizations2023",
+    "issued": { "date-parts": [["2023", 6, 29]] },
+    "number": "arXiv:2304.07645",
+    "source": "arXiv",
+    "title": "Magnitude Invariant Parametrizations Improve Hypernetwork Learning",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2304.07645"
+  },
+  {
+    "id": "picardTorchManual_seed34072021",
+    "abstract": "In this paper I investigate the effect of random seed selection on the accuracy when using popular deep learning architectures for computer vision. I scan a large amount of seeds (up to $10^4$) on CIFAR 10 and I also scan fewer seeds on Imagenet using pre-trained models to investigate large scale datasets. The conclusions are that even if the variance is not very large, it is surprisingly easy to find an outlier that performs much better or much worse than the average.",
+    "accessed": { "date-parts": [["2023", 12, 29]] },
+    "author": [{ "family": "Picard", "given": "David" }],
+    "citation-key": "picardTorchManual_seed34072021",
+    "issued": { "date-parts": [["2021", 9, 16]] },
+    "language": "en",
+    "source": "ZoteroBib",
+    "title": "Torch.manual_seed(3407) is all you need: On the influence of random seeds in deep learning architectures for computer vision",
+    "title-short": "Torch.manual_seed(3407) is all you need",
+    "type": "article",
+    "URL": "https://arxiv.org/abs/2109.08203v2"
+  },
+  {
+    "id": "picardTorchManual_seed34072023",
+    "abstract": "In this paper I investigate the effect of random seed selection on the accuracy when using popular deep learning architectures for computer vision. I scan a large amount of seeds (up to $10^4$) on CIFAR 10 and I also scan fewer seeds on Imagenet using pre-trained models to investigate large scale datasets. The conclusions are that even if the variance is not very large, it is surprisingly easy to find an outlier that performs much better or much worse than the average.",
+    "accessed": { "date-parts": [["2024", 1, 20]] },
+    "author": [{ "family": "Picard", "given": "David" }],
+    "citation-key": "picardTorchManual_seed34072023",
+    "DOI": "10.48550/arXiv.2109.08203",
+    "issued": { "date-parts": [["2023", 5, 11]] },
+    "number": "arXiv:2109.08203",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "Torch.manual_seed(3407) is all you need: On the influence of random seeds in deep learning architectures for computer vision",
+    "title-short": "Torch.manual_seed(3407) is all you need",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2109.08203"
+  },
+  {
+    "id": "sunSimpleEffectivePruning2023",
+    "abstract": "As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches that drop a subset of network weights while striving to preserve performance. Existing methods, however, require either retraining, which is rarely affordable for billion-scale LLMs, or solving a weight reconstruction problem reliant on second-order information, which may also be computationally expensive. In this paper, we introduce a novel, straightforward yet effective pruning method, termed Wanda (Pruning by Weights and activations), designed to induce sparsity in pretrained LLMs. Motivated by the recent observation of emergent large magnitude features in LLMs, our approach prunes weights with the smallest magnitudes multiplied by the corresponding input activations, on a per-output basis. Notably, Wanda requires no retraining or weight update, and the pruned LLM can be used as is. We conduct a thorough evaluation of our method Wanda on LLaMA and LLaMA-2 across various language benchmarks. Wanda significantly outperforms the established baseline of magnitude pruning and performs competitively against recent method involving intensive weight update. Code is available at https://github.com/locuslab/wanda.",
+    "accessed": { "date-parts": [["2024", 1, 20]] },
+    "author": [
+      { "family": "Sun", "given": "Mingjie" },
+      { "family": "Liu", "given": "Zhuang" },
+      { "family": "Bair", "given": "Anna" },
+      { "family": "Kolter", "given": "J. Zico" }
+    ],
+    "citation-key": "sunSimpleEffectivePruning2023",
+    "DOI": "10.48550/arXiv.2306.11695",
+    "issued": { "date-parts": [["2023", 10, 6]] },
+    "number": "arXiv:2306.11695",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "A Simple and Effective Pruning Approach for Large Language Models",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/2306.11695"
+  },
+  {
+    "id": "wimmerFreezeNetFullPerformance2021",
+    "abstract": "Pruning generates sparse networks by setting parameters to zero. In this work we improve one-shot pruning methods, applied before training, without adding any additional storage costs while preserving the sparse gradient computations. The main difference to pruning is that we do not sparsify the network's weights but learn just a few key parameters and keep the other ones fixed at their random initialized value. This mechanism is called freezing the parameters. Those frozen weights can be stored efficiently with a single 32bit random seed number. The parameters to be frozen are determined one-shot by a single for- and backward pass applied before training starts. We call the introduced method FreezeNet. In our experiments we show that FreezeNets achieve good results, especially for extreme freezing rates. Freezing weights preserves the gradient flow throughout the network and consequently, FreezeNets train better and have an increased capacity compared to their pruned counterparts. On the classification tasks MNIST and CIFAR-10/100 we outperform SNIP, in this setting the best reported one-shot pruning method, applied before training. On MNIST, FreezeNet achieves 99.2% performance of the baseline LeNet-5-Caffe architecture, while compressing the number of trained and stored parameters by a factor of x 157.",
+    "accessed": { "date-parts": [["2024", 2, 10]] },
+    "author": [
+      { "family": "Wimmer", "given": "Paul" },
+      { "family": "Mehnert", "given": "Jens" },
+      { "family": "Condurache", "given": "Alexandru" }
+    ],
+    "citation-key": "wimmerFreezeNetFullPerformance2021",
+    "DOI": "10.1007/978-3-030-69544-6_41",
+    "issued": { "date-parts": [["2021"]] },
+    "page": "685-701",
+    "source": "arXiv.org",
+    "title": "FreezeNet: Full Performance by Reduced Storage Costs",
+    "title-short": "FreezeNet",
+    "type": "chapter",
+    "URL": "http://arxiv.org/abs/2011.14087",
+    "volume": "12627"
+  },
+  { "id": "zotero-10", "citation-key": "zotero-10", "type": "article" }
+]
