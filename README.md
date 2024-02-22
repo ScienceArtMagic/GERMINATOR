@@ -16,7 +16,7 @@ Hyperparameters are optimized manually or through AutoML techniques. Still, expe
 
 This project introduces GERMINATOR, a potentially trillionth-scale hybrid language model architecture, leveraging (pseudo)random seeds for parameter initialization, shift, scale, and sparse-to-dense prune-mixing supermasks, as learnable scalar parameters. The millions-to-trillions of parameters typically stored in model checkpoints are instead generated on the fly - and only the parameters of the current, previous, and next layers must be loaded on the target device's memory at any given time (during training and inference).
 
-Code will be made available at [this URL](https://github.com/ScienceArtMagic/GERMINATOR).
+Code will be made available at [https://github.com/ScienceArtMagic/GERMINATOR](https://github.com/ScienceArtMagic/GERMINATOR).
 
 ## Introduction
 
